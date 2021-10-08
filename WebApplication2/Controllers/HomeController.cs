@@ -38,8 +38,8 @@ namespace WebApplication2.Controllers
             {
                 Id = spreadsheetDocument.WorkbookPart.
                 GetIdOfPart(worksheetPart),
-                SheetId = 1,
-                Name = "mySheet"
+                SheetId = 2,
+                Name = "mySheet2"
             };
             sheets.Append(sheet);
 
@@ -90,6 +90,7 @@ namespace WebApplication2.Controllers
             ViewBag.Message = Environment.GetEnvironmentVariable("HOMEDRIVE");
             ViewBag.Message = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
             ViewBag.Message = "D:\\home";
+            ViewBag.Message = "GitVersion";
             InsertWorksheet(@"D:\Home\Sheet3.xlsx");
             return View();
         }
